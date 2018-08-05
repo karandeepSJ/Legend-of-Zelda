@@ -2,18 +2,19 @@
 
 #ifndef BALL_H
 #define BALL_H
-
-
 class Ball {
 public:
     Ball() {}
-    Ball(float x, float y, color_t color);
+    Ball(float , float , float , float, color_t color);
     glm::vec3 position;
-    float rotation;
+    float rotation,radius;
     void draw(glm::mat4 VP);
-    void set_position(float x, float y);
-    void tick();
-    double speed;
+    void fire(float,float,float);
+    void set_position(float,float,float);
+    float uy,ux;
+    float launchz;
+    float v;
+    float u;
 private:
     VAO *object;
 };

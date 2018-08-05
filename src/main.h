@@ -71,15 +71,31 @@ struct bounding_box_t {
     float height;
 };
 
-bool detect_collision(bounding_box_t a, bounding_box_t b);
-
+bool detect_collision_rock_boat(int);
+bool detect_collision_boat_monster(int);   
+bool detect_collision_ball_monster(int);   
+bool detect_collision_barrel_boat(int);
+bool detect_collision_plus_boat(int);
 extern float screen_zoom, screen_center_x, screen_center_y;
+extern int pause;
 void reset_screen();
 
 // ---- Colors ----
 extern const color_t COLOR_RED;
+extern const color_t COLOR_DARKRED;
+extern const color_t COLOR_DARKERRED;
+extern const color_t COLOR_MEDRED;
+extern const color_t COLOR_WHITE;
 extern const color_t COLOR_GREEN;
+extern const color_t COLOR_DARKGREEN;
+extern const color_t COLOR_PURPLE;
+extern const color_t COLOR_ORANGE;
+extern const color_t COLOR_GREY;
+extern const color_t COLOR_BROWN;
+extern const color_t COLOR_YELLOW;
+extern const color_t COLOR_CYAN;
 extern const color_t COLOR_BLACK;
+extern const color_t COLOR_BLUE;
 extern const color_t COLOR_BACKGROUND;
 
 #endif
